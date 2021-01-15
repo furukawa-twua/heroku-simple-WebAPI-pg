@@ -70,11 +70,13 @@ $(document).ready(() => {
                 on: {
                     click: function (event) {
                         setData(results[Number($(event.target).data("num"))]);
+                        $("#page button").each((index, ele) => $(ele).removeClass("text-gray-300"));
                         $(event.target).addClass("text-gray-300");
                     }
                 }
             }).appendTo("#page");
         }
+        $("#page button:first").addClass("text-gray-300");
         $("#page").removeClass("hidden");
     }
 });
