@@ -37,10 +37,10 @@ app.use(express.static("public"));
 
 app.get('/', async (req, res) => {
     try {
-        const code = req.query.code;
+        const zipcode = req.query.zipcode;
         const callback = req.query.callback || "kbc";
         const client = await pool.connect();
-        const result = await client.query('SELECT * FROM zipcodes WHERE code = $1', [code]);
+        const result = await client.query('SELECT * FROM zipcodes WHERE zipcode = $1', [zipcode]);
         if (result) {
             res.send(`${callback}({ result: ${JSON.stringify(result.rows)}, message: null })`);
         } else {
