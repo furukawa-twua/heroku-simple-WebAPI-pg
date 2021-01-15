@@ -39,23 +39,23 @@ $(document).ready(() => {
     });
 
     function setDate (data) {
-        $("#jis").text(result.jis);
-        $("#oldZipcode").text(result.oldZipcode);
-        $("#zipcode").text(result.zipcode);
-        $("#address21").text(result.address21);
-        $("#address11").text(result.address11);
-        $("#address22").text(result.address22);
-        $("#address12").text(result.address12);
-        $("#address23").text(result.address23);
-        $("#address13").text(result.address13);
-        $("#a")[result.a == "0" ? "addClass" : "removeClass"]("hidden");
-        $("#b")[result.b == "0" ? "addClass" : "removeClass"]("hidden");
-        $("#c")[result.c == "0" ? "addClass" : "removeClass"]("hidden");
-        $("#d")[result.d == "0" ? "addClass" : "removeClass"]("hidden");
+        $("#jis").text(data.jis);
+        $("#oldZipcode").text(data.oldZipcode);
+        $("#zipcode").text(data.zipcode);
+        $("#address21").text(data.address21);
+        $("#address11").text(data.address11);
+        $("#address22").text(data.address22);
+        $("#address12").text(data.address12);
+        $("#address23").text(data.address23);
+        $("#address13").text(data.address13);
+        $("#a")[data.a == "0" ? "addClass" : "removeClass"]("hidden");
+        $("#b")[data.b == "0" ? "addClass" : "removeClass"]("hidden");
+        $("#c")[data.c == "0" ? "addClass" : "removeClass"]("hidden");
+        $("#d")[data.d == "0" ? "addClass" : "removeClass"]("hidden");
         const e = ["変更なし", "変更あり", "廃止"];
-        $("#e").text(e[Number(result.e)]);
+        $("#e").text(e[Number(data.e)]);
         const f = ["変更なし", "市政・区政・町政・分区・政令指定都市施行", "住居表示の実施", "区画整理", "郵便区調整等", "訂正", "廃止"]
-        $("#f").text(f[Number(result.f)]);
+        $("#f").text(f[Number(data.f)]);
         $("#result").removeClass("hidden");
         $("#resultMsg").addClass("hidden");
     }
