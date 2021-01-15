@@ -41,7 +41,7 @@ app.get('/', async (req, res) => {
         const callback = req.query.callback || "kbc";
         const client = await pool.connect();
         const result = await client.query('SELECT * FROM zipcodes WHERE zipcode = $1', [zipcode]);
-        if (result) {
+        if (result.rowCount != 0) {
             res.send(`${callback}({ result: ${JSON.stringify(result.rows)}, message: null })`);
         } else {
             res.status(404).send(`${callback}({ result: null, message: '存在しません' })`);
