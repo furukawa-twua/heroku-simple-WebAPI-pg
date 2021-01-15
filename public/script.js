@@ -64,8 +64,8 @@ $(document).ready(() => {
         $("#page").empty();
         for (let i = 0; i < num; i++) {
             $("<button></button>", {
-                value: i + 1,
-                class: ["mx-2", "px-2", "hover:text-gray-300", "focus:outline-none"],
+                text: i + 1,
+                class: "mx-2 px-2 hover:text-gray-300 focus:outline-none",
                 "data-num": i,
                 on: {
                     click: function (event) {
