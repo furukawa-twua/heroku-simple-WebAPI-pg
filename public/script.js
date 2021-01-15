@@ -26,7 +26,7 @@ $(document).ready(() => {
             type: "GET",
             dataType: "jsonp",
             jsonpCallback: "hoge",
-            data: { code: $("#zipcodeInput").val() }
+            data: { zipcode: $("#zipcodeInput").val() }
         })
         .done(hoge)
         .fail((jqXHR) => {
