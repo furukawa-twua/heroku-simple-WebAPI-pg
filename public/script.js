@@ -70,6 +70,7 @@ $(document).ready(() => {
                 on: {
                     click: function (event) {
                         setData(results[Number($(event.target).data("num"))]);
+                        $(event.target).addClass("text-gray-300");
                     }
                 }
             }).appendTo("#page");
