@@ -4,7 +4,7 @@ $(document).ready(() => {
         const hoge = ({ result, message }) => {
             if (result) {
                 results = result;
-                setDate(result[0]);
+                setData(result[0]);
                 if (result.length <= 1) {
                     $("#page").empty();
                     $("#page").addClass("hidden");
@@ -38,7 +38,7 @@ $(document).ready(() => {
         });
     });
 
-    function setDate (data) {
+    function setData (data) {
         $("#jis").text(data.jis);
         $("#oldZipcode").text(data.oldZipcode);
         $("#zipcode").text(data.zipcode);
