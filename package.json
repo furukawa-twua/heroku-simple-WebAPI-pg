@@ -1,0 +1,28 @@
+{
+  "name": "heroku-simple-webapi-pg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furukawa-twua/heroku-simple-WebAPI-pg.git"
+  },
+  "author": "furukawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/furukawa-twua/heroku-simple-WebAPI-pg/issues"
+  },
+  "homepage": "https://github.com/furukawa-twua/heroku-simple-WebAPI-pg#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "csv-parse": "^4.14.2"
+  }
+}
