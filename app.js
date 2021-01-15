@@ -4,6 +4,14 @@ const cookieParser = require("cookie-parser");
 const port = process.env.PORT || 5000
 // const fs = require('fs');
 // const csvSync = require('csv-parse/lib/sync');
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
